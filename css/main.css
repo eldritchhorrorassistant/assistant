@@ -1,0 +1,29 @@
+.nav-mobile .nav-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-mobile .nav-link{
+    font-size: .875em;
+}
+.card-img{
+    max-width: 150px;
+}
+.ststistic-data{
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: normal;
+    border-radius: 4px;
+    padding: 0px 12px;
+}
+.to-top{
+    display: none;
+    position: fixed;
+    margin: auto;
+    right: .5rem;
+    bottom: 50px;
+    z-index: 2000;
+    font-size: 3rem;
+    /* color: #fff; */
+    opacity: .25;
+}
