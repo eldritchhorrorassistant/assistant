@@ -26,7 +26,7 @@ function increaseDice(){
 }
 
 function throwDice(){
-    console.log(document.getElementById('dice-input').value)
+    // console.log(document.getElementById('dice-input').value)
     let dices = document.querySelector('.dices').querySelectorAll('.dice-placeholder')
     let results = []
     dices.forEach(dice => {
@@ -41,7 +41,7 @@ function diceRender(number){
     let dices = document.querySelector('.dices')
     dices.innerHTML = ''
     for (let i = 0; i < number; i++) {
-        dices.innerHTML += `<div class="dice-placeholder m-1"><div class="spinner-border text-light"></div></div>`
+        dices.innerHTML += `<div class="dice-placeholder m-1"><div class="spinner-border text-info"></div></div>`
     }
 }
 
@@ -50,7 +50,7 @@ function diceStatistic(array){
     element.forEach(item => {
         item.innerHTML = 0
         item.classList.remove('text-white')
-        item.classList.remove('bg-secondary')
+        item.classList.remove('bg-dark')
         item.classList.remove('bg-success')
         item.classList.remove('bg-danger')
     })
@@ -60,12 +60,12 @@ function diceStatistic(array){
         let content = +element.innerText
         element.innerText = content + 1
         element.classList.add('text-white')
-        element.classList.add('bg-secondary')
         if(number < 3){
             element.classList.add('bg-danger')
-        }
-        if(number > 4){
+        }else if(number > 4){
             element.classList.add('bg-success')
+        }else{
+            element.classList.add('bg-dark')
         }
     }
 }

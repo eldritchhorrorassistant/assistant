@@ -107,17 +107,17 @@ let cards = {
         },
         {
           title: "Библия короля Якова",
-          subtitle: "Вещь -Книга",
+          subtitle: "Вещь - Книга",
           img: "Bibliya korolya_Yakova"
         },
         {
           title: "Оккультная книга",
-          subtitle: "Вещь -Книга",
+          subtitle: "Вещь - Книга",
           img: "Okkultnaya_kniga"
         },
         {
           title: "Оккультный манусрипт",
-          subtitle: "Вещь -Книга",
+          subtitle: "Вещь - Книга",
           img: "Okkultnyy_manusript"
         },
         {
@@ -291,7 +291,177 @@ let cards = {
         "img": "Cultes_des_Goules"
       }
     ],
-    investigators: [],
+    spells: [
+      {
+        "title": "Ясновидение",
+        "subtitle": "Чары",
+        "img": "Yasnovidenie"
+      },
+      {
+        "title": "Лишение силы",
+        "subtitle": "Чары",
+        "img": "Lishenie_sily"
+      },
+      {
+        "title": "Туманы Релеха",
+        "subtitle": "Чары",
+        "img": "Tumany_Relekha"
+      },
+      {
+        "title": "Вселить отвагу",
+        "subtitle": "Чары",
+        "img": "Vselit_otvagu"
+      },
+      {
+        "title": "Защита плоти",
+        "subtitle": "Чары",
+        "img": "Zaschita_ploti"
+      },
+      {
+        "title": "Иссушение",
+        "subtitle": "Ритуал",
+        "img": "Issushenie"
+      },
+      {
+        "title": "Сотворение",
+        "subtitle": "Ритуал",
+        "img": "Sotvorenie"
+      },
+      {
+        "title": "Пронзить пустоту",
+        "subtitle": "Ритуал",
+        "img": "Pronzit_pustotu"
+      },
+      {
+        "title": "Благословение Исиды",
+        "subtitle": "Ритуал",
+        "img": "Blagoslovenie_Isidy"
+      },
+      {
+        "title": "Пища для ума",
+        "subtitle": "Ритуал",
+        "img": "Pischa_dlya_uma"
+      }
+    ],
+    conditions: [
+      {
+        "title": "Паранойя",
+        "subtitle": "Безумие",
+        "img": "Paranoyya"
+      },
+      {
+        "title": "Галлюцинации",
+        "subtitle": "Безумие",
+        "img": "Gallyutsinatsii"
+      },
+      {
+        "title": "Амнезия",
+        "subtitle": "Безумие",
+        "img": "Amneziya"
+      },
+      {
+        "title": "Благословение",
+        "subtitle": "Дар",
+        "img": "Blagoslovenie"
+      },
+      {
+        "title": "Проклятие",
+        "subtitle": "Напасть",
+        "img": "Proklyatie"
+      },
+      {
+        "title": "Заключение",
+        "subtitle": "Препятствие",
+        "img": "Zaklyuchenie"
+      },
+      {
+        "title": "Тёмная сделка",
+        "subtitle": "Соглашение",
+        "img": "Temnaya_sdelka_"
+      },
+      {
+        "title": "Долг",
+        "subtitle": "Соглашение - Обычное",
+        "img": "Dolg"
+      },
+      {
+        "title": "Травма ноги",
+        "subtitle": "Травма",
+        "img": "Travma_nogi_"
+      },
+      {
+        "title": "Внутрення травма",
+        "subtitle": "Травма",
+        "img": "Vnutrennya_travma_"
+      },
+      {
+        "title": "Травма спины",
+        "subtitle": "Травма",
+        "img": "Travma_spiny_"
+      }
+    ],
+    investigators: [
+      {
+        "title": "Диана Стэнли",
+        "subtitle": "",
+        "img": "Diana_Stenli_"
+      },
+      {
+        "title": "Акаче Оньеле",
+        "subtitle": "",
+        "img": "Akache_Onele_"
+      },
+      {
+        "title": "Жаклин Файн",
+        "subtitle": "",
+        "img": "Zhaklin_Fayn_"
+      },
+      {
+        "title": "Джим Кальвер",
+        "subtitle": "",
+        "img": "Dzhim_Kalver_"
+      },
+      {
+        "title": "Лола Хейз",
+        "subtitle": "",
+        "img": "Lola_Kheyz_"
+      },
+      {
+        "title": "Лео Андерсон",
+        "subtitle": "",
+        "img": "Leo_Anderson_"
+      },
+      {
+        "title": "Марк Хэрриган",
+        "subtitle": "",
+        "img": "Mark_Kherrigan_"
+      },
+      {
+        "title": "Лили Чен",
+        "subtitle": "",
+        "img": "Lili_Chen_"
+      },
+      {
+        "title": "Триш Скарборо",
+        "subtitle": "",
+        "img": "Trish_Skarboro_"
+      },
+      {
+        "title": "Норман Уизерс",
+        "subtitle": "",
+        "img": "Norman_Uizers_"
+      },
+      {
+        "title": "Чарли Кейн",
+        "subtitle": "",
+        "img": "Charli_Keyn_"
+      },
+      {
+        "title": "Сайлас Марш",
+        "subtitle": "",
+        "img": "Saylas_Marsh_"
+      }
+    ],
     clues: [{title: 'Аркхэм'},{title: 'Токио'},{title: 'Рим'},{title: 'Лондон'},{title: 'Стамбул'},{title: 'Буэнос-Айрес'},
     {title: 'Сан-Франциско'},{title: 'Антарктида'},{title: 'Тунгуска'},{title: 'Пирамиды'},{title: 'Гималаи'},
     {title: 'Сердце Африки'},{title: 'Сидней'},{title: 'Амазонка'},{title: 'Шанхай'},

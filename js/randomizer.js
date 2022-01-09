@@ -8,7 +8,7 @@ modal.addEventListener('hidden.bs.modal', function (event){
 })
 
 function clearModalContent(){
-    modal.querySelector('.card-img').src = "/imgs/avatar.png"
+    modal.querySelector('.card-img').src = "/imgs/img-holder.jpg"
     modal.querySelector('.card-title').innerText = '...'
     modal.querySelector('.card-subtitle').innerText = '...' 
     modal.querySelector('.btn-repeat').onclick = undefined

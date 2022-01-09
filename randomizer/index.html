@@ -4,51 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/imgs/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/imgs/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/imgs/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/imgs/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/imgs/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/imgs/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/imgs/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/imgs/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/imgs/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/imgss/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Древний ужас</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     
 <link rel="stylesheet" href="/css/main.css">
 
 <meta name="generator" content="Hexo 5.4.0"></head>
-<body class="bg-dark text-white">
+<body class="bg-secondary text-light">
     <div id="page">
         <nav class="navbar navbar-dark bg-transparent fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand me-auto" href="/">
         <!-- <i class="bi bi-github"></i> -->
-        <img src="/imgs/cthulhu.svg" alt="logotype" height="32px">
+        <img src="/imgs/header-logo.png" alt="logotype" height="32px">
       </a>
       <ul class="nav justify-content-end d-none d-sm-flex">
         <li class="nav-item">
-    <a class="nav-link link-success" href="/">
+    <a class="nav-link link-primary" href="/">
         <i class="bi bi-book"></i>
         <span>Справочник</span>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link link-success" href="/dice">
+    <a class="nav-link link-primary" href="/dice">
         <i class="bi bi-dice-5"></i>
         <span>Кубики</span>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link link-success" href="/randomizer">
+    <a class="nav-link link-primary" href="/randomizer">
         <i class="bi bi-shuffle"></i>
         <span>Рандомайзер</span>
     </a>
 </li>
       </ul>
-      <div class="dropdown">
-        <button class="btn btn-dark shadow-none dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-translate"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">English</a></li>
-          <li><a class="dropdown-item" href="#">Русский</a></li>
-        </ul>
-      </div>
+      
+      <button onclick="bsModalOptions.show()" class="btn fs-4 text-primary shadow-none" type="button">
+        <i class="bi bi-gear-fill"></i>
+      </button>
     </div>
 </nav>
 <div class="mt-5 py-2"></div>
@@ -102,18 +116,74 @@
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
             <div class="list-group mb-3">
-                <button type="button" class="list-group-item list-group-item-primary list-group-item-action">
+                <button 
+                onclick="getRandomCard('spells')"
+                type="button" 
+                class="list-group-item list-group-item-primary list-group-item-action">
                     <i class="bi bi-magic"></i> Заклинания
                 </button>
-                <button type="button" class="list-group-item list-group-item-action">Ритуал</button>
-                <button type="button" class="list-group-item list-group-item-action">Чары</button>
+                <button 
+                onclick="getRandomCard('spells', 'ритуал')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Ритуал
+                </button>
+                <button 
+                onclick="getRandomCard('spells', 'чары')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Чары
+                </button>
             </div>
             <div class="list-group mb-3">
-                <button type="button" class="list-group-item list-group-item-secondary list-group-item-action">
+                <button 
+                onclick="getRandomCard('conditions')"
+                type="button" 
+                class="list-group-item list-group-item-secondary list-group-item-action">
                     <i class="bi bi-lightning-fill"></i> Состояния
                 </button>
-                <button type="button" class="list-group-item list-group-item-action">Безумие</button>
-                <button type="button" class="list-group-item list-group-item-action">Травма</button>
+                <button 
+                onclick="getRandomCard('conditions', 'безумие')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Безумие
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'дар')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Дар
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'напасть')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Напасть
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'обычное')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Обычное
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'препятствие')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Препятствие
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'соглашение')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Соглашение
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'травма')"
+                type="button" 
+                class="list-group-item list-group-item-action">
+                    Травма
+                </button>
             </div>
         </div>
         <div class="col-12 col-lg-4">
@@ -159,23 +229,23 @@
     </div>
 </div>
         <div class="mb-5 py-4"></div>
-<nav class="navbar-dark bg-dark fixed-bottom">
+<nav class="fixed-bottom">
     
-    <ul class="nav nav-fill nav-mobile d-sm-none">
+    <ul class="nav navbar-dark bg-dark nav-fill nav-mobile d-sm-none">
         <li class="nav-item">
-    <a class="nav-link link-success" href="/">
+    <a class="nav-link link-primary" href="/">
         <i class="bi bi-book"></i>
         <span>Справочник</span>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link link-success" href="/dice">
+    <a class="nav-link link-primary" href="/dice">
         <i class="bi bi-dice-5"></i>
         <span>Кубики</span>
     </a>
 </li>
 <li class="nav-item">
-    <a class="nav-link link-success" href="/randomizer">
+    <a class="nav-link link-primary" href="/randomizer">
         <i class="bi bi-shuffle"></i>
         <span>Рандомайзер</span>
     </a>
@@ -192,10 +262,10 @@
         </div>
         <div class="modal-body">
             <div class="modal-card text-center">
-                <img class="card-img" src="https://via.placeholder.com/150" class="rounded" alt="pic">
+                <img class="card-img" src="/imgs/img-holder.jpg" class="rounded" alt="pic">
                 <h5 class="card-title h5 mt-3">...</h5>
                 <h6 class="card-subtitle h6 text-muted">...</h6>
-                <p class="card-text p">...</p>
+                <!-- <p class="card-text p">...</p> -->
             </div>
         </div>
         <div class="modal-footer justify-content-between">
@@ -203,6 +273,90 @@
                 <i class="bi bi-arrow-repeat"></i> уже есть
             </button>
             <button type="button" class="btn btn-success" data-bs-dismiss="modal">ОК</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="modal-options" class="modal text-black" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Настройки</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Дополнения
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" checked disabled>
+                              Древний ужас
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Забытые тайны
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Хребты Безумия
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Таинственные руины
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Под пирамидами
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Знамения Каркозы
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Мир грёз
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Разрушенные города
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Маски Ньярлатхотепа
+                            </label>
+                            <label class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="">
+                              Дети Юггота
+                            </label>
+                            
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          Язык
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action active">Русский</a>
+                            <a href="#" class="list-group-item list-group-item-action">English</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="modal-footer justify-content-end">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>
