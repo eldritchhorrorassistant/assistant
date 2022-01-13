@@ -7820,6 +7820,9 @@ textarea.form-control-lg {
 .card-img {
   max-width: 150px; }
 
+.dice-placeholder {
+  line-height: 0; }
+
 .ststistic-icon {
   font-size: 1.5rem; }
 

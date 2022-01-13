@@ -1,4 +1,4 @@
-console.log('main.js')
+// console.log('main.js')
 
 //modal options
 let modalOptions = document.getElementById('modal-options')

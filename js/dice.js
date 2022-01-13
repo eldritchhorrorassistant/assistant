@@ -25,16 +25,22 @@ function increaseDice(){
     diceRender(diceInput.value)
 }
 
-function throwDice(){
-    // console.log(document.getElementById('dice-input').value)
+async function throwDice(){
     let dices = document.querySelector('.dices').querySelectorAll('.dice-placeholder')
     let results = []
+
     dices.forEach(dice => {
         let randomInt = randomInteger(1, 6)
         results.push(randomInt)
-        dice.innerHTML = `<i class="bi bi-dice-${randomInt}-fill" style="font-size: 32px"></i>`
+        dice.innerHTML = `<div class="spinner-border text-info"></div><i class="bi bi-dice-${randomInt}-fill d-none" style="font-size: 32px"></i>`
     })
-    diceStatistic(results)
+    setTimeout(function(){
+        dices.forEach(dice => {
+            dice.querySelector('.spinner-border').classList.add('d-none')
+            dice.querySelector('i').classList.remove('d-none')
+        })
+        diceStatistic(results)
+    }, 250);
 }
 
 function diceRender(number){
@@ -43,6 +49,7 @@ function diceRender(number){
     for (let i = 0; i < number; i++) {
         dices.innerHTML += `<div class="dice-placeholder m-1"><div class="spinner-border text-info"></div></div>`
     }
+    throwDice()
 }
 
 function diceStatistic(array){
