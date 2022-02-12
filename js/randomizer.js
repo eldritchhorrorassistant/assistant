@@ -36,6 +36,9 @@ function getRandomCard(categoryName, filter = ''){
         }
     }
 
+    let expansions = JSON.parse(localStorage.expansions)
+    categoryCurrent = categoryCurrent.filter( item => expansions.includes(item.expansion.toLowerCase().replace(/ /gi, '-')) )
+    
     categoryCurrent = shuffleArray(categoryCurrent)
 
     let randomInt = Math.floor(Math.random()*categoryCurrent.length)
@@ -45,7 +48,18 @@ function getRandomCard(categoryName, filter = ''){
     let modalTitle = modal.querySelector('.card-title')
     let modalSubtitle = modal.querySelector('.card-subtitle')
 
-    if(randomItem && randomItem.img) modalImg.src = `/imgs/${categoryName}/${randomItem.img}.jpg`
+    let imageURL = `/imgs/cards/${categoryName}/${randomItem.image}`
+
+    fetch(imageURL).then(response => {
+        // console.log(response)
+        if (response.ok) {
+            if(randomItem && randomItem.image) modalImg.src = imageURL
+        }else{
+            modalImg.src = '/imgs/img-holder.jpg'
+        }
+    })
+
+    // if(randomItem && randomItem.image) modalImg.src = `/imgs/cards/${categoryName}/${randomItem.image}`
     if(randomItem && randomItem.title) modalTitle.innerText = randomItem.title
     if(randomItem && randomItem.subtitle) modalSubtitle.innerText = randomItem.subtitle
     modal.querySelector('.btn-repeat').onclick = function(){ getRandomCard(categoryName, filter) }

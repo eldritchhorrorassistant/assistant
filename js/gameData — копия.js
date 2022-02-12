@@ -1,4 +1,4 @@
-let cards = {
+let gameData = {
     assets: [
         {
           title: "Карманные часы",
@@ -107,17 +107,17 @@ let cards = {
         },
         {
           title: "Библия короля Якова",
-          subtitle: "Вещь - Книга",
+          subtitle: "Вещь -Книга",
           img: "Bibliya korolya_Yakova"
         },
         {
           title: "Оккультная книга",
-          subtitle: "Вещь - Книга",
+          subtitle: "Вещь -Книга",
           img: "Okkultnaya_kniga"
         },
         {
           title: "Оккультный манусрипт",
-          subtitle: "Вещь - Книга",
+          subtitle: "Вещь -Книга",
           img: "Okkultnyy_manusript"
         },
         {
@@ -377,7 +377,7 @@ let cards = {
       {
         "title": "Тёмная сделка",
         "subtitle": "Соглашение",
-        "img": "Temnaya_sdelka_"
+        "img": "Temnaya_sdelka"
       },
       {
         "title": "Долг",
@@ -387,17 +387,17 @@ let cards = {
       {
         "title": "Травма ноги",
         "subtitle": "Травма",
-        "img": "Travma_nogi_"
+        "img": "Travma_nogi"
       },
       {
         "title": "Внутрення травма",
         "subtitle": "Травма",
-        "img": "Vnutrennya_travma_"
+        "img": "Vnutrennya_travma"
       },
       {
         "title": "Травма спины",
         "subtitle": "Травма",
-        "img": "Travma_spiny_"
+        "img": "Travma_spiny"
       }
     ],
     investigators: [

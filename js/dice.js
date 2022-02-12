@@ -28,12 +28,13 @@ function increaseDice(){
 async function throwDice(){
     let dices = document.querySelector('.dices').querySelectorAll('.dice-placeholder')
     let results = []
-
+    
     dices.forEach(dice => {
         let randomInt = randomInteger(1, 6)
         results.push(randomInt)
         dice.innerHTML = `<div class="spinner-border text-info"></div><i class="bi bi-dice-${randomInt}-fill d-none" style="font-size: 32px"></i>`
     })
+    
     setTimeout(function(){
         dices.forEach(dice => {
             dice.querySelector('.spinner-border').classList.add('d-none')

@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/imgs/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/imgs/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/imgs/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/imgs/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/imgs/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/imgs/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/imgs/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/imgs/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/imgs/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/imgs/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon-16x16.png">
-    <link rel="manifest" href="/imgs/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/imgss/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Приложение-ассистент для настольной игры Древний Ужас с дополнениями. Случайные карты, игральные кости, справка по правилам.">
+    <meta name="keywords" content="Древний Ужас, настольная игра, приложение для настольной игры, ассистент для настольной игры, случайная карта, игральные кости">
 
     <title>Древний ужас</title>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/apple-icon-144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <script src="/js/app.js"></script>
+
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="/bootstrap-icons.css">
     
 <link rel="stylesheet" href="/css/main.css">
 
@@ -66,51 +73,119 @@
     </div>
 </nav>
 <div class="mt-5 py-2"></div>
-        <div class="container">
+        <div class="container extensions_">
     <div class="row">
         <div class="col-12 col-sm-6 col-lg-4">
             <div class="list-group mb-3">
                 <button 
                 onclick="getRandomCard('assets')"
                 type="button" 
-                class="list-group-item list-group-item-warning list-group-item-action">
+                class="cards__assets list-group-item list-group-item-warning list-group-item-action eldritch-horror">
                     <i class="bi bi-tools"></i> Активы
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'безделушка')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Безделушка
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'вещь')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Вещь
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'книга')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Книга
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'оружие')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Оружие
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'союзник')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Союзник
                 </button>
                 <button 
                 onclick="getRandomCard('assets', 'услуга')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Услуга
+                </button>
+            </div>
+            <div class="list-group mb-3">
+                <button
+                onclick="getRandomCard('unique_assets')"
+                type="button" 
+                class="unique__ list-group-item list-group-item-danger list-group-item-action">
+                    <i class="bi bi-screwdriver"></i> Уникальный актив
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'безделушка')"
+                type="button" 
+                class="unique__trinket list-group-item list-group-item-action">
+                    Безделушка
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'вещь')"
+                type="button" 
+                class="unique__item list-group-item list-group-item-action">
+                    Вещь
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'волшебный')"
+                type="button" 
+                class="unique__magic list-group-item list-group-item-action">
+                    Волшебный
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'задача')"
+                type="button" 
+                class="unique__task list-group-item list-group-item-action">
+                    Задача
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'книга')"
+                type="button" 
+                class="unique__tome list-group-item list-group-item-action">
+                    Книга
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'оружие')"
+                type="button" 
+                class="unique__weapon list-group-item list-group-item-action">
+                    Оружие
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'персонаж')"
+                type="button" 
+                class="unique__character list-group-item list-group-item-action">
+                    Персонаж
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'редкий')"
+                type="button" 
+                class="unique__relic list-group-item list-group-item-action">
+                    Редкий
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'союзник')"
+                type="button" 
+                class="unique__ally list-group-item list-group-item-action">
+                    Союзник
+                </button>
+                <button
+                onclick="getRandomCard('unique_assets', 'таро')"
+                type="button" 
+                class="unique__tarot list-group-item list-group-item-action">
+                    Таро
                 </button>
             </div>
         </div>
@@ -119,19 +194,25 @@
                 <button 
                 onclick="getRandomCard('spells')"
                 type="button" 
-                class="list-group-item list-group-item-primary list-group-item-action">
+                class="spell__ list-group-item list-group-item-primary list-group-item-action eldritch-horror">
                     <i class="bi bi-magic"></i> Заклинания
+                </button>
+                <button 
+                onclick="getRandomCard('spells', 'аура')"
+                type="button" 
+                class="spell__glamour list-group-item list-group-item-action">
+                    Аура
                 </button>
                 <button 
                 onclick="getRandomCard('spells', 'ритуал')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Ритуал
                 </button>
                 <button 
                 onclick="getRandomCard('spells', 'чары')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Чары
                 </button>
             </div>
@@ -139,49 +220,73 @@
                 <button 
                 onclick="getRandomCard('conditions')"
                 type="button" 
-                class="list-group-item list-group-item-secondary list-group-item-action">
+                class="list-group-item list-group-item-secondary list-group-item-action eldritch-horror">
                     <i class="bi bi-lightning-fill"></i> Состояния
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'безумие')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Безумие
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'болезнь')"
+                type="button" 
+                class="conditions__illness list-group-item list-group-item-action">
+                    Болезнь
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'воздействие')"
+                type="button" 
+                class="conditions__exposure list-group-item list-group-item-action">
+                    Воздействие
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'дар')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Дар
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'напасть')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Напасть
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'обычное')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Обычное
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'препятствие')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Препятствие
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'преследование')"
+                type="button" 
+                class="conditions__pursuit list-group-item list-group-item-action">
+                    Преследование
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'соглашение')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Соглашение
+                </button>
+                <button 
+                onclick="getRandomCard('conditions', 'талант')"
+                type="button" 
+                class="conditions__talent list-group-item list-group-item-action">
+                    Талант
                 </button>
                 <button 
                 onclick="getRandomCard('conditions', 'травма')"
                 type="button" 
-                class="list-group-item list-group-item-action">
+                class="list-group-item list-group-item-action eldritch-horror">
                     Травма
                 </button>
             </div>
@@ -193,7 +298,7 @@
                         <button 
                         onclick="getRandomCard('artifacts')"
                         type="button" 
-                        class="list-group-item list-group-item-info list-group-item-action">
+                        class="list-group-item list-group-item-info list-group-item-action eldritch-horror">
                             <i class="bi bi-stars"></i> Артефакт
                         </button>
                     </div>
@@ -201,7 +306,7 @@
                         <button 
                         onclick="getRandomCard('ancients')"
                         type="button" 
-                        class="list-group-item list-group-item-danger list-group-item-action">
+                        class="list-group-item list-group-item-danger list-group-item-action eldritch-horror">
                             <i class="bi bi-reddit"></i> Древний
                         </button>
                     </div>
@@ -211,27 +316,27 @@
                         <button 
                         onclick="getRandomCard('investigators')" 
                         type="button" 
-                        class="list-group-item list-group-item-dark list-group-item-action">
+                        class="list-group-item list-group-item-dark list-group-item-action eldritch-horror">
                             <i class="bi bi-person-circle"></i> Сыщик 
                         </button>
                     </div>
                     <div class="list-group mb-3">
                         <button 
-                        onclick="getRandomCard('clues')"
+                        onclick="getRandomCard('locations')"
                         type="button" 
-                        class="list-group-item list-group-item-success list-group-item-action">
-                            <i class="bi bi-search"></i> Улика
+                        class="list-group-item list-group-item-success list-group-item-action eldritch-horror">
+                            <i class="bi bi-search"></i> Улика / Локация
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> 
         <div class="mb-5 py-4"></div>
 <nav class="fixed-bottom">
     
-    <ul class="nav navbar-dark bg-dark nav-fill nav-mobile d-sm-none">
+    <ul class="nav navbar-dark flex-nowrap bg-dark nav-fill nav-mobile d-sm-none pb-2 pt-1">
         <li class="nav-item">
     <a class="nav-link link-primary" href="/">
         <i class="bi bi-book"></i>
@@ -288,70 +393,66 @@
         <div class="modal-body">
             <div class="row mb-3">
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
                           Дополнения
                         </div>
-                        <div class="list-group list-group-flush">
+                        <div class="expansions-list list-group list-group-flush">
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="" checked disabled>
+                              <input class="form-check-input me-1" type="checkbox" value="eldritch-horror" checked disabled>
                               Древний ужас
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="forsaken-lore">
                               Забытые тайны
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="mountains-of-madness">
                               Хребты Безумия
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="strange-remnants">
                               Таинственные руины
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="under-the-pyramids">
                               Под пирамидами
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="signs-of-carcosa">
                               Знамения Каркозы
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="the-dreamlands">
                               Мир грёз
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="cities-in-ruin">
                               Разрушенные города
                             </label>
                             <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
+                              <input class="form-check-input me-1" type="checkbox" value="masks-of-nyarlathotep">
                               Маски Ньярлатхотепа
-                            </label>
-                            <label class="list-group-item">
-                              <input class="form-check-input me-1" type="checkbox" value="">
-                              Дети Юггота
                             </label>
                             
                         </div>
                       </div>
                 </div>
             </div>
-            <hr>
+            <!-- <hr>
             <div class="row mt-3">
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                        <div class="card-header bg-dark text-white">
                           Язык
                         </div>
                         <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action active">Русский</a>
+                            <a href="#" class="list-group-item list-group-item-action bg-warning">Русский</a>
                             <a href="#" class="list-group-item list-group-item-action">English</a>
                         </div>
                       </div>
                 </div>
-            </div>
+            </div> -->
 
             
         </div>
